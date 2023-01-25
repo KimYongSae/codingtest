@@ -17,13 +17,34 @@ public class ¿ÀÅ«¼ö {
 		int[] arr = new int[Integer.parseInt(br.readLine())];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		
+
+		StringBuilder sb = new StringBuilder();
+		int[] answer = new int[arr.length];
 		for(int i = 0; i < arr.length; i ++) {
 			arr[i] = Integer.parseInt(st.nextToken());
 				
 		}
+		answer[arr.length-1] = -1;
+		
+		for(int i = arr.length-1; i >= 0; i --) {
+			for(int j = i+1; j <arr.length; j ++) {
+				if(arr[i] < arr[j]) {
+					answer[i] = arr[j];
+					break;
+				} else {
+					answer[i] = -1;
+				}
+			}
+		}
 		
 		
+		for(int i : answer) {
+			sb.append(i);
+			sb.append(" ");
+		}
+
+	    sb.deleteCharAt(sb.length() - 1);
+		System.out.print(sb);
 	}
 
 }
