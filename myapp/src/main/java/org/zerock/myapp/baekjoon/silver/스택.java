@@ -1,4 +1,4 @@
-package org.zerock.myapp.baekjoon.sliver;
+package org.zerock.myapp.baekjoon.silver;
 
 import java.io.BufferedReader;
 import java.io.IOException;
