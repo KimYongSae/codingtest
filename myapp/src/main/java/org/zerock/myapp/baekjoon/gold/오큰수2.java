@@ -61,9 +61,9 @@ public class 오큰수2 {
 //		입력받은 수열을 배열로 저장
 		
 		for(int i = 0; i < arr.length; i ++) {
-			arr[i] = Integer.parseInt(st.nextToken());
+			arr[i] = integer.parseint(st.nexttoken());
 		}
-		
+
 //		------------------------------------
 //		오큰수 판별
 		
