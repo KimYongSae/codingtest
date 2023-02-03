@@ -19,7 +19,6 @@ public class ╫╨ец {
 			arr[i] = br.readLine();
 		}
 		
-		what?
 		
 		
 		

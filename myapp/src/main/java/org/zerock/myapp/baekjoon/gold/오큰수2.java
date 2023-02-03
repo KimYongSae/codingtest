@@ -61,7 +61,7 @@ public class 오큰수2 {
 //		입력받은 수열을 배열로 저장
 		
 		for(int i = 0; i < arr.length; i ++) {
-			arr[i] = integer.parseint(st.nexttoken());
+			arr[i] =  Integer.parseInt(st.nextToken());
 		}
 
 //		------------------------------------
@@ -112,13 +112,6 @@ public class 오큰수2 {
 // 현재의 값을 조건에 따라 업데이트하여 저장
 
 // while(!stack.isEmpty())를 통해 꺼내면서 비교
-
-
-
-
-
-
-
 
 
 
