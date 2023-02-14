@@ -1,10 +1,17 @@
 package org.zerock.myapp.programmers.lv2;
 
-public class °¡Àå_Å«_¼ö {
+import java.util.Arrays;
+
+public class ê°€ì¥_í°_ìˆ˜ {
 
 	public static void main(String[] args) {
 		
+		int [] arr = {1,2,3};
 		
-	}asdf
+		
+		Arrays.sort(arr);
+		
+		
+	}
 
 }
