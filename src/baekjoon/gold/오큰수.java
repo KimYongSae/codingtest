@@ -1,4 +1,4 @@
-package org.zerock.myapp.baekjoon.gold;
+package baekjoon.gold;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,50 +8,50 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class ¿ÀÅ«¼ö {
+public class ì˜¤í°ìˆ˜ {
 
 	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		int[] arr = new int[Integer.parseInt(br.readLine())];		// Ã¹ÁÙ ¼ö¿­Å©±â
-		
-		StringTokenizer st = new StringTokenizer(br.readLine());	// µÑÂ°ÁÙ ¼ö¿­ ÅäÅ«È­
+
+		int[] arr = new int[Integer.parseInt(br.readLine())];		// ì²«ì¤„ ìˆ˜ì—´í¬ê¸°
+
+		StringTokenizer st = new StringTokenizer(br.readLine());	// ë‘˜ì§¸ì¤„ ìˆ˜ì—´ í† í°í™”
 
 		StringBuilder sb = new StringBuilder();
 		int[] answer = new int[arr.length];
-		
-		
+
+
 		for(int i = 0; i < arr.length; i ++) {
 			arr[i] = Integer.parseInt(st.nextToken());
-				
-		} // ¼ö¿­À» ¹è¿­·Î ÀúÀå
-		
+
+		} // ìˆ˜ì—´ì„ ë°°ì—´ë¡œ ì €ì¥
+
 		answer[arr.length-1] = -1;
-		
-		// ¹è¿­ÀÇ µÚ¿¡¼­ºÎÅÍ ¼øÈ¸ÇÏ¸é¼­ ¿ÀÅ«¼ö ÆÇº°
+
+		// ë°°ì—´ì˜ ë’¤ì—ì„œë¶€í„° ìˆœíšŒí•˜ë©´ì„œ ì˜¤í°ìˆ˜ íŒë³„
 		for(int i = arr.length-1; i >= 0; i --) {
-			
-			// Ã¹¹øÂ° for¹®ÀÇ Ä«¿îÅÍº¯¼ö¿¡¼­ºÎÅÍ Á¤¹æÇâÀ¸·Î ¼øÈ¸ÇÏ¸ç
-			// Ä«¿îÅÍº¯¼öº¸´Ù Å« ¼ö¸¦ Ã£À½
+
+			// ì²«ë²ˆì§¸ forë¬¸ì˜ ì¹´ìš´í„°ë³€ìˆ˜ì—ì„œë¶€í„° ì •ë°©í–¥ìœ¼ë¡œ ìˆœíšŒí•˜ë©°
+			// ì¹´ìš´í„°ë³€ìˆ˜ë³´ë‹¤ í° ìˆ˜ë¥¼ ì°¾ìŒ
 			for(int j = i+1; j <arr.length; j ++) {
 				if(arr[i] < arr[j]) {
 					answer[i] = arr[j];
 					break;
-					// Ã£À»½Ã break·Î Å»Ãâ
+					// ì°¾ì„ì‹œ breakë¡œ íƒˆì¶œ
 				} else {
 					answer[i] = -1;
-				}	// ¾øÀ¸¸é ¿ÀÅ«¼ö´Â -1
+				}	// ì—†ìœ¼ë©´ ì˜¤í°ìˆ˜ëŠ” -1
 			}
 		}
-		
-		
+
+
 		for(int i : answer) {
 			sb.append(i);
 			sb.append(" ");
 		}
 
-	    sb.deleteCharAt(sb.length() - 1);
+		sb.deleteCharAt(sb.length() - 1);
 		System.out.print(sb);
 	}
 

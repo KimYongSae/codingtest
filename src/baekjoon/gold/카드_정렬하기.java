@@ -1,4 +1,4 @@
-package org.zerock.myapp.baekjoon.gold;
+package baekjoon.gold;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,108 +8,108 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.PriorityQueue;
 
-public class Ä«µå_Á¤·ÄÇÏ±â {
+public class ì¹´ë“œ_ì •ë ¬í•˜ê¸° {
 
 	public static void main(String[] args) throws Exception, IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
+
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
-		
+
 		int cnt = Integer.parseInt(br.readLine());
-		
+
 		for(int i = 0; i < cnt; i ++) {
 			pq.add(Integer.parseInt(br.readLine()));
 		}
-		
+
 		int tmp = 0;
 		int answer = 0;
-		
-		
-//		¿ì¼±¼øÀ§Å¥·Î ÀÛÀº°Å ²¨³»¼­ °è¼Ó ´õÇØ°¡¸é ´äÀÌ ³ª¿Ã°Å¶ó »ý°¢
-//		
-		
+
+
+//		ìš°ì„ ìˆœìœ„íë¡œ ìž‘ì€ê±° êº¼ë‚´ì„œ ê³„ì† ë”í•´ê°€ë©´ ë‹µì´ ë‚˜ì˜¬ê±°ë¼ ìƒê°
+//
+
 //		if(pq.size() <= 1 ) {
 //			System.out.println(pq.poll());
 //		} else {
 //			while(!pq.isEmpty()) {
 //				tmp += pq.poll();
-//				
+//
 //				answer += tmp;
 //			}
 //		}
 //		System.out.println(answer);
-		
-//		ÇØ³õ°í º¸´Ï ¼º¸³ ¾ÈÇÏ±ä ÇÏ´Âµ¥ Ã³À½ pollÇÑ °ªÀ» »©¸é Á¤´äÀÌ¶ó ¿ØÁö ¹æÇâ¼ºÀº ¸Â´Â°ÍÃ³·³ ´À²¸Áü 
-//		Å×½ºÆ®ÄÉÀÌ½º¸¦ ´õ Ã£¾Æº½
-		
+
+//		í•´ë†“ê³  ë³´ë‹ˆ ì„±ë¦½ ì•ˆí•˜ê¸´ í•˜ëŠ”ë° ì²˜ìŒ pollí•œ ê°’ì„ ë¹¼ë©´ ì •ë‹µì´ë¼ ì™ ì§€ ë°©í–¥ì„±ì€ ë§žëŠ”ê²ƒì²˜ëŸ¼ ëŠê»´ì§
+//		í…ŒìŠ¤íŠ¸ì¼€ì´ìŠ¤ë¥¼ ë” ì°¾ì•„ë´„
+
 //		https://www.acmicpc.net/board/view/72799
-//		4									
-//		30		
+//		4
+//		30
 //		40		70
 //		50		120
 //		100		220
-//		´ä: 410
-		
-//		Å×½ºÆ®ÄÉÀÌ½º ¿·¿¡ ´õÇÑ ¼ýÀÚ¸¦ Àû¾î³õÀ¸´Ï
-//		Ã³À½ µÎ°ª¸¸ µû·Î ´õÇØÁÖ°í ´õÇÑ°ª°ú ´ÙÀ½°ªÀ» ´õÇÏ´Â¹æ½ÄÀ¸·Î Ç®¸é µÉ°Å¶ó º¸¿©Áü
-//		´õÇÑ °ªÀ» deque¿¡ ³Ö°í ÇÏ³ª¾¿ popÇÏ´Â ¹æ½ÄÀ¸·Î ±¸ÇöÇØº¸ÀÚ 
-		
+//		ë‹µ: 410
+
+//		í…ŒìŠ¤íŠ¸ì¼€ì´ìŠ¤ ì˜†ì— ë”í•œ ìˆ«ìžë¥¼ ì ì–´ë†“ìœ¼ë‹ˆ
+//		ì²˜ìŒ ë‘ê°’ë§Œ ë”°ë¡œ ë”í•´ì£¼ê³  ë”í•œê°’ê³¼ ë‹¤ìŒê°’ì„ ë”í•˜ëŠ”ë°©ì‹ìœ¼ë¡œ í’€ë©´ ë ê±°ë¼ ë³´ì—¬ì§
+//		ë”í•œ ê°’ì„ dequeì— ë„£ê³  í•˜ë‚˜ì”© popí•˜ëŠ” ë°©ì‹ìœ¼ë¡œ êµ¬í˜„í•´ë³´ìž
+
 //		Deque<Integer> dq = new ArrayDeque<>();
-//		
+//
 //		if(pq.size() <= 1 ) {
 //			System.out.println(pq.poll());
 //		} else {
 //			tmp = pq.poll()+pq.poll();
 //			dq.add(tmp);
-//			
+//
 //			while(!pq.isEmpty()) {
-//			dq.addLast(dq.peekLast() + pq.poll());	
+//			dq.addLast(dq.peekLast() + pq.poll());
 //			}
 //			while(!dq.isEmpty()) {
 //				answer += dq.pop();
 //			}
 //		}
 //		System.out.println(answer);
-		
-//		ÀßÀÛµ¿ÇÑ´Ù. Á¦Ãâ ¤¡ 
-		
-//		°³°°ÀÌ¸ê¸Á
-		
-//		Å×½ºÆ®ÄÉÀÌ½º¸¦ ´õ È®ÀÎÇØ
-		
-		
+
+//		ìž˜ìž‘ë™í•œë‹¤. ì œì¶œ ã„±
+
+//		ê°œê°™ì´ë©¸ë§
+
+//		í…ŒìŠ¤íŠ¸ì¼€ì´ìŠ¤ë¥¼ ë” í™•ì¸í•´
+
+
 //		4
-//		30		
+//		30
 //		40		70
 //		50		120
 //		60		180
-//		´ä: 360
-		
-//		¹Ù·Î ´ÙÀ½¹ø Å×½ºÆ®ÄÉÀÌ½º¿¡ ¹Ý·Ê°¡ ³ª¿È 
-		
-//		Áö±Ý±îÁö À§¿¡¼­ºÎÅÍ Â÷·Ê´ë·Î ´õÇÏ¸é µÇ´ÂÁÙ´Âµ¥ 
-//		´õÇÑ °ªÀ» ´Ù½Ã ÀüÃ¼ ¹è¿­°ú ºñ±³ÇØ¼­ ÀÛÀº °ª¸¸ µÎ°³ »Ì¾Æ¾ßÇÏ´Â°ÍÀÌ¾úÀ½ 
-		
-//		deque°°Àº°É ¾µ°Ô ¾Æ´Ï¶ó priorityqueue¿¡ ±×³É ´Ù½Ã ³Ö°í µÎ°³ ´Ù½Ã »Ì¾Æ¾ßÇÏ´Â°Å¿´´ø°Å
-		
-//		while(!pq.isEmpty()) {  //  ÀÌ·¯¸é poll µÎ¹øÇÒ¶§ ¿¡·¯³¯
+//		ë‹µ: 360
+
+//		ë°”ë¡œ ë‹¤ìŒë²ˆ í…ŒìŠ¤íŠ¸ì¼€ì´ìŠ¤ì— ë°˜ë¡€ê°€ ë‚˜ì˜´
+
+//		ì§€ê¸ˆê¹Œì§€ ìœ„ì—ì„œë¶€í„° ì°¨ë¡€ëŒ€ë¡œ ë”í•˜ë©´ ë˜ëŠ”ì¤„ëŠ”ë°
+//		ë”í•œ ê°’ì„ ë‹¤ì‹œ ì „ì²´ ë°°ì—´ê³¼ ë¹„êµí•´ì„œ ìž‘ì€ ê°’ë§Œ ë‘ê°œ ë½‘ì•„ì•¼í•˜ëŠ”ê²ƒì´ì—ˆìŒ
+
+//		dequeê°™ì€ê±¸ ì“¸ê²Œ ì•„ë‹ˆë¼ priorityqueueì— ê·¸ëƒ¥ ë‹¤ì‹œ ë„£ê³  ë‘ê°œ ë‹¤ì‹œ ë½‘ì•„ì•¼í•˜ëŠ”ê±°ì˜€ë˜ê±°
+
+//		while(!pq.isEmpty()) {  //  ì´ëŸ¬ë©´ poll ë‘ë²ˆí• ë•Œ ì—ëŸ¬ë‚ 
 		while(pq.size() >= 2)  {
-		
+
 			int polltmp1 = pq.poll();
 			int polltmp2 = pq.poll();
-			
+
 			answer += polltmp1 + polltmp2;
-			
+
 			pq.add(polltmp1 + polltmp2);
-			
-			
+
+
 		}
-		
+
 		System.out.println(answer);
-		
-		
-		
+
+
+
 	}
 
 }

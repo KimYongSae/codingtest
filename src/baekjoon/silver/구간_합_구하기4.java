@@ -1,4 +1,4 @@
-package org.zerock.myapp.baekjoon.silver;
+package baekjoon.silver;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,8 +7,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class ±¸°£_ÇÕ_±¸ÇÏ±â4 {
-	
+public class êµ¬ê°„_í•©_êµ¬í•˜ê¸°4 {
+
 	public static void main(String... args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -16,13 +16,13 @@ public class ±¸°£_ÇÕ_±¸ÇÏ±â4 {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int arr[] = new int[Integer.parseInt(st.nextToken())+1];
 		int tmp = Integer.parseInt(st.nextToken());
-		
+
 		st = new StringTokenizer(br.readLine());
-		
+
 //		for(int i = 1; i < arr.length; i++) {
 //			arr[i] = Integer.parseInt(st.nextToken());
 //		}
-		
+
 //		for(int j = 0; j < tmp; j ++) {
 //			st = new StringTokenizer(br.readLine());
 //			int start = Integer.parseInt(st.nextToken());
@@ -34,24 +34,24 @@ public class ±¸°£_ÇÕ_±¸ÇÏ±â4 {
 //			System.out.println(answer);
 //			answer = 0;
 //		}
-		
+
 		for(int i = 1; i < arr.length; i ++) {
 			arr[i] = arr[i-1] + Integer.parseInt(st.nextToken());
 		}
-		
-		int answer = 0; 
-		
+
+		int answer = 0;
+
 		for(int i = 0; i < tmp; i ++) {
 			st = new StringTokenizer(br.readLine());
 			int start = Integer.parseInt(st.nextToken());
 			int end = Integer.parseInt(st.nextToken());
-			
+
 			answer = arr[end] - arr[start-1];
-			
+
 			System.out.println(answer);
 		}
-		
-		
-		
+
+
+
 	}
 }

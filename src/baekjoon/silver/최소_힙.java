@@ -1,4 +1,4 @@
-package org.zerock.myapp.baekjoon.silver;
+package baekjoon.silver;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,8 +15,7 @@ public class 최소_힙 {
 		int cnt = Integer.parseInt(br.readLine());
 		
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
-//		PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());		�ִ� ��
-		
+
 		
 		for(int i = 0 ; i < cnt ; i ++) {
 			int a = Integer.parseInt(br.readLine());

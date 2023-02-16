@@ -1,10 +1,10 @@
-package org.zerock.myapp.baekjoon.silver;
+package baekjoon.silver;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Ω∫≈√ {
+public class Ïä§ÌÉù {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		
