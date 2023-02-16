@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class ÃÖ¼Ò_Èü {
+public class ìµœì†Œ_íž™ {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 	
@@ -15,7 +15,7 @@ public class ÃÖ¼Ò_Èü {
 		int cnt = Integer.parseInt(br.readLine());
 		
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
-//		PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());		ÃÖ´ë Èü
+//		PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());		ï¿½Ö´ï¿½ ï¿½ï¿½
 		
 		
 		for(int i = 0 ; i < cnt ; i ++) {
