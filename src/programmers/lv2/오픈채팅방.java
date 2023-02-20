@@ -8,7 +8,7 @@ public class 오픈채팅방 {
 
         ArrayList<String> answer = new ArrayList<>();
 //        String[] answer = new String[record.length];
-        HashMap<String, String> map = new HashMap();
+        HashMap<String, String> map = new HashMap<>();
 
         for (int i = 0; i < record.length; i++) {
             String[] tmparr = record[i].split(" ");
