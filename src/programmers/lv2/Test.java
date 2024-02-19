@@ -1,14 +1,16 @@
 package programmers.lv2;
 
-import java.util.Arrays;
+import java.util.Locale;
 
 public class Test {
-	public static void main(String args[]) {
+	public static void main(String args[]) throws Exception{
 
-		String abc = "http://localhost:8080/*";
 
-		String[] tmp = abc.split("/");
-		System.out.println(tmp[tmp.length-1]);
+		String a = "ABC";
+
+		System.out.println(a.toLowerCase(Locale.ROOT));
+
+
 	}
 }
 	
